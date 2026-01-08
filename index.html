@@ -8,14 +8,44 @@
     <title>FunFacts</title>
 </head>
 <body>
-    <img src="/logo.png" alt="logo of the page" height="68" width="68">
-    <h1>Today I learned!</h1>
+    <header>
+        <img src="/logo.png" alt="logo of the page" height="68" width="68">
+        <h1>Today I learned!</h1>
+    </header>
 
-    <ul>
+    <form action="">
+        <input type="text" placeholder="Share a fact with the world...">
+        <span class="letCounter">200</span>
+        <input type="text" placeholder="Trustworthy source...">
+        <select name="chooseCategory" id="">
+            <option value="">Choose category:</option>
+            <option value="Technology">Technology</option>
+            <option value="Science">Science</option>
+            <option value="Finance">Finance</option>
+        </select>
+        <button>Post</button>
+    </form>
+    
+    <main>
+        <aside>
+            <ul class="buttons">
+            <li><button>All</button></li>
+            <li> <button>Technology</button></li>
+            <li> <button>Society</button></li>
+            </ul>
+        </aside>
+       
+       <section>
+        <ul>
         <li>
             <p>React is being developed by Meta (formerly facebook) 
                 <a href="https://opensource.fb.com/" target="_blank" class="source">Source</a>
                 <span>technology</span>
+                <div>
+                    <button>👍 <strong>24</strong></button>
+                    <button>🤯 <strong>9</strong></button>
+                    <button>⛔ <strong>4</strong></button>
+                </div>
             </p>
         </li>
         <li>
@@ -23,8 +53,15 @@
                 43% of fathers had never changed a diaper. Today, that number is down to 3%
                 <a href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids" target="_blank" class="source">Source</a> 
             <span>society</span>
+            <div>
+                <button>👍 <strong>11</strong></button>
+                <button>🤯 <strong>2</strong></button>
+                <button>⛔ <strong>0</strong></button>
+            </div>
             </p>
         </li>
     </ul>
+       </section>
+    </main>
 </body>
 </html>
