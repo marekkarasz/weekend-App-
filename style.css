@@ -35,7 +35,7 @@ header{
 }
 main{
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 200px 1fr;
     gap: 40px;
 }
 
@@ -183,3 +183,29 @@ ul{
     transition: 0.2s all ease-in;
 }
 
+/* Responsive styles */
+@media (max-width: 900px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1200px){
+    .facts{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+    }
+}
+@media (max-width: 1000px){
+    body{
+        padding: 32px 48px;
+    }
+    .fact-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .fact-form input,
+    .fact-form select,{
+        width: auto;
+    }
+}
