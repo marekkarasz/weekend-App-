@@ -54,6 +54,7 @@ h1{
     display: flex;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 .fact-form input{
     padding: 16px;
@@ -205,7 +206,7 @@ ul{
         align-items: stretch;
     }
     .fact-form input,
-    .fact-form select,{
+    .fact-form select{
         width: auto;
     }
 }
