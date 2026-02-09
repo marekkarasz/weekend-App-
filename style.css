@@ -49,6 +49,9 @@ h1{
     text-align: center;
     line-height: 1;
 }
+p{
+    font-size: 1rem;
+}
 
 /*     Main layout  */
 
@@ -66,7 +69,9 @@ main{
     overflow-x: auto;
     padding-bottom: .5rem;
 }
+
 /*   Facts.   */
+
 .facts {
     background-color: #44403c;
     border: 1px solid #000;
@@ -79,4 +84,57 @@ main{
 .vote-buttons {
     display: flex;
     gap: .75rem;
+}
+
+/*     Media querries.       */
+
+@media (min-width: 37.5rem){
+    body{
+        padding: 1.5rem;
+    }
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1{
+        font-size: 2.125rem;
+        text-align: left;
+    }
+    .logo img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 56.25rem) {
+    body {
+        padding: 2.5rem;
+    }
+    h1{
+        font-size: 2.3rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    main{
+        grid-template-columns: 13.75rem 1fr;
+        gap: 2rem;
+    }
+    .buttons{
+        flex-direction: column;
+        overflow: visible;
+    }
+    .facts{
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.25rem 1.875rem;
+    }
+    .vote-buttons{
+        margin-left: auto;
+    }
 }
