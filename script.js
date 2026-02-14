@@ -32,6 +32,18 @@ const initialFacts = [
   },
 ];
 
+// Categories
+const CATEGORIES = [
+  { name: "technology", color: "#3b82f6" },
+  { name: "science", color: "#16a34a" },
+  { name: "finance", color: "#ef4444" },
+  { name: "society", color: "#eab308" },
+  { name: "entertainment", color: "#db2777" },
+  { name: "health", color: "#14b8a6" },
+  { name: "history", color: "#f97316" },
+  { name: "news", color: "#8b5cf6" },
+];
+
 // selecting DOM elements
 const btn = document.querySelector(".btn-open");
 const form = document.querySelector(".fact-form");
@@ -52,6 +64,8 @@ async function loadFacts(){
     },
 });
 const data = await response.json();
+//const filteredData = data.filter((fact) => fact.category === "society");
+
 createFactsList(data);
 }
 
@@ -65,7 +79,8 @@ function createFactsList(dataArray) {
         ${fact.text}
         <a href="${fact.source}" target="_blank" class="source">Source</a>   
      </p>
-        <span class="tag" style="background-color: #3b82f6;">${fact.category}</span>
+        <span class="tag" style="background-color: 
+        ${CATEGORIES.find((cat) => cat.name === fact.category).color}">${fact.category}</span>
      </li>`);
 
 const html = htmlArr.join("");
@@ -84,3 +99,6 @@ btn.addEventListener('click', function() {
         btn.textContent = 'Share a fact';
     }
 });
+
+
+
